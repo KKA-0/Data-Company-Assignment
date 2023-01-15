@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -54,8 +57,10 @@
   <h1 class="login">OR</h1>
   <br>
   <br>
+  <a href="{% provider_login_url 'google'%}?next=/">
   <img class="image" src="https://sp-ao.shortpixel.ai/client/to_auto,q_glossy,ret_img,w_1024/https://onymos.com/wp-content/uploads/2020/10/google-signin-button-1024x260.png">
- </center>
+  </a>
+</center>
  <script>
   $(document).ready(function(){
     $('.dropdown-submenu a.test').on("click", function(e){

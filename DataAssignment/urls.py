@@ -23,5 +23,5 @@ from DataAssignment import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
-    path('Login/', views.LoginActivity, name='home')
+    path('Login/', views.LoginActivity, name='home2')
 ]

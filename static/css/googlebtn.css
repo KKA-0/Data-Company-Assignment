@@ -1,4 +1,44 @@
+body{
 
+  background-image: url("/static/img/bg.jpg");
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.login{
+  color: rgb(255, 0, 0);
+  font-family: cursive;
+  font-weight: bolder;
+}
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -1px;
+}
+
+.submit{
+  height: 40px;
+  width: 140px;
+  background-color: aliceblue;
+  font-size: larger;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.name{
+  height: 30px;
+  border-radius: 4px;
+  border: 2px black;
+}
 #customBtn {
   display: inline-block;
   background: white;
@@ -23,6 +63,12 @@ span.icon {
   width: 42px;
   height: 42px;
 }
+
+.image{
+  height: 40px;
+  width: 30%;
+}
+
 span.buttonText {
   display: inline-block;
   vertical-align: middle;

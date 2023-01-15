@@ -1,100 +1,69 @@
-{% extends 'basefile.html' %}
-{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/css/googlebtn.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
+  
+  <title>Login</title>
+</head>
+<body>
+  
+ <center>
+  <div class="parent">
+  <h1 class="login">Login Page</h1>
+  <hr><br><br><br><br><br>
+  <form>
+    <input  class="name" type="text" placeholder="Enter Your Name"><br><br>
+    <div class="dropdown">
+      <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Names
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li class="dropdown-submenu">
+          <a class="test" tabindex="-1" href="#">Name X <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a tabindex="-1" href="#">Name A</a></li>
+            <li><a tabindex="-1" href="#">Name B</a></li>
+            <li><a tabindex="-1" href="#">Name C</a></li>
+            
+              </ul>
+            </li>
+            <li class="dropdown-submenu">
+              <a class="test" tabindex="-1" href="#">Name Y <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a tabindex="-1" href="#">Name K</a></li>
+                <li><a tabindex="-1" href="#">Name L</a></li>
+                <li><a tabindex="-1" href="#">Name M</a></li>
+                
+                  </ul>
+                </li>
+          </ul>
+        </li>
+      </ul>
+    </div><br>
+    <input class="submit" type="submit">
 
-<div>
-  <center>
-    <h1 class="34" href="#hello">Login Page</h1>
-    <hr class="w-50">
-    <!-- Google Authentication -->
-    <div id="gSignInWrapper">
-      <span class="label">Log in with:</span>
-      <div id="customBtn">
-        <span class="icon">
-
-        </span>
-        <span class="buttonText">Google</span>
-      </div>
-    </div>
-    <div id="name"></div>
-
-    <br>
-    <h3>OR</h3>
-    <br>
-
-    <!-- FORM START -->
-
-    <form class="row g-3 justify-content-center needs-validation container" novalidate>
-
-      <!-- NAME FIELD -->
-
-      <div class="col-md-3">
-        <label for="validationCustom01" class="form-label">Name Field</label>
-        <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
-        <div class="valid-feedback">
-          Looks good!
-        </div>
-        <br>
-        <!-- SUBMIT BUTTON -->
-        <div class="col-12">
-          <button class="btn btn-primary" type="submit">Submit form</button>
-        </div>
-      </div>
-
-      <!-- DROPDOWN FIELD -->
-
-      <div class="col-md-4">
-        <label for="validationCustom04" class="form-label">DropDown Field</label><br>
-
-      <!-- FIRST DROPDOWN -->
-        <div class="dropdown">
-          <button class="dropbtn">Name X</button>
-          <div class="dropdown-content">
-            <a href="#">Name a</a>
-            <div>
-              <!-- SECOND NESTED DROPDOWN -->
-              <div class="dropdown1">
-                <div class="dropbtn1">Name b</div>
-                <div class="dropdown-content1">
-                  <a href="#">Name l</a>
-                  <a href="#">Name m</a>
-                  <a href="#">Name n</a>
-                </div>
-              </div>
-            </div>
-            <a href="#">Name c</a>
-          </div>
-        </div>
-
-      </div>
-    </form>
-
-
-  </center>
-
+  </form>
 </div>
-<script>startApp();</script>
-<script>
-  // Example starter JavaScript for disabling form submissions if there are invalid fields
-  (() => {
-    'use strict'
-
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    const forms = document.querySelectorAll('.needs-validation')
-
-    // Loop over them and prevent submission
-    Array.from(forms).forEach(form => {
-      form.addEventListener('submit', event => {
-        if (!form.checkValidity()) {
-          event.preventDefault()
-          event.stopPropagation()
-        }
-
-        form.classList.add('was-validated')
-      }, false)
-    })
-  })()
-</script>
-
-
-{% endblock body %}
+  <h1 class="login">OR</h1>
+  <br>
+  <br>
+  <img class="image" src="https://sp-ao.shortpixel.ai/client/to_auto,q_glossy,ret_img,w_1024/https://onymos.com/wp-content/uploads/2020/10/google-signin-button-1024x260.png">
+ </center>
+ <script>
+  $(document).ready(function(){
+    $('.dropdown-submenu a.test').on("click", function(e){
+      $(this).next('ul').toggle();
+      e.stopPropagation();
+      e.preventDefault();
+    });
+  });
+  </script>
+</body>
+</html>

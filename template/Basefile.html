@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- BOOTSTRAP CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+
+    <title>Document</title>
+
+  <!-- GOOGLE AUTH -->
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+  <script src="https://apis.google.com/js/api:client.js"></script>
+  <script src="/static/js/script.js"></script>
+  <script>
+  var googleUser = {};
+  var startApp = function() {
+    gapi.load('auth2', function(){
+      // Retrieve the singleton for the GoogleAuth library and set up the client.
+      auth2 = gapi.auth2.init({
+        client_id: '1020185201279-0k0dromo14t8alul2qitiaif8o2j5fhu.apps.googleusercontent.com',
+        cookiepolicy: 'single_host_origin',
+        // Request scopes in addition to 'profile' and 'email'
+        //scope: 'additional_scope'
+      });
+      attachSignin(document.getElementById('customBtn'));
+    });
+  };
+
+  function attachSignin(element) {
+    console.log(element.id);
+    auth2.attachClickHandler(element, {},
+        function(googleUser) {
+          document.getElementById('name').innerText = "Signed in: " +
+              googleUser.getBasicProfile().getName();
+        }, function(error) {
+          alert(JSON.stringify(error, undefined, 2));
+        });
+  }
+  </script>
+
+
+  <!-- FOR GOOGLE BUTTON CSS -->
+ <link rel="stylesheet" href="/static/css/googlebtn.css">
+
+ <!-- ALL OTHER CSS -->
+ <link rel="stylesheet" href="/static/css/style.css">
+ 
+</head>
+
+<body>
+    <!-- NAVBAR START -->
+
+    <nav class="navbar navbar-expand-lg bg-dark">
+        <div class="container">
+            <a class="navbar-brand text-light" href="/">The DataCompany</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </nav>
+    <div class="parent"> 
+        <!-- Title -->
+        <div class="text">The Data Company</div>
+        <h5><i>by Karan Agarwal</i></h5>
+        <!-- Div for Login Page  -->
+        <div class="sign-up"><a href="#login1" id="login2">Login</a></div>
+        <!-- Div for Sign-Up Page  -->
+        
+        
+        </div>
+        
+
+<div>
+  <center>
+    <h1 class="texthaa" hraf="#login2" id="login1">Login Page</h1>
+    <hr class="w-50">
+    <!-- Google Authentication -->
+    <div id="gSignInWrapper">
+      <span class="textha">Log in with:</span>
+      <div id="customBtn">
+        <span class="icon">
+
+        </span>
+        <span class="buttonText ahah">Google</span>
+      </div>
+    </div>
+    <div id="name"></div>
+
+    <br>
+    <h3 class="textha">OR</h3>
+    <br>
+
+    <!-- FORM START -->
+
+    <form class="row g-3 justify-content-center needs-validation container" novalidate>
+
+      <!-- NAME FIELD -->
+
+      <div class="col-md-3">
+        <label for="validationCustom01" class="form-label textha">Name Field</label>
+        <input type="text" class="form-control" id="validationCustom01" placeholder="Enter Your Name" required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+        <br>
+        <!-- SUBMIT BUTTON -->
+        <div class="col-12">
+          <button class="btn btn-primary" type="submit">Submit form</button>
+        </div>
+      </div>
+
+      <!-- DROPDOWN FIELD -->
+
+      <div class="col-md-4">
+        <label for="validationCustom04" class="form-label textha">DropDown Field</label><br>
+
+      <!-- FIRST DROPDOWN -->
+        <div class="dropdown">
+          <button class="dropbtn">Name X</button>
+          <div class="dropdown-content">
+            <a href="#">Name a</a>
+            <div>
+              <!-- SECOND NESTED DROPDOWN -->
+              <div class="dropdown1">
+                <div class="dropbtn1">Name b</div>
+                <div class="dropdown-content1">
+                  <a href="#">Name l</a>
+                  <a href="#">Name m</a>
+                  <a href="#">Name n</a>
+                </div>
+              </div>
+            </div>
+            <a href="#">Name c</a>
+          </div>
+        </div>
+
+      </div>
+    </form>
+
+<br>
+<br>
+<br>
+<br>
+  </center>
+
+</div>
+    <!-- NAVBAR END -->
+
+
+    {% block body %}
+    
+    {% endblock body %}
+
+
+    <!-- FOOTER START -->
+
+    <footer>
+        <h2>Footer</h2>
+    </footer>
+
+    <!-- FOOTER END -->
+
+
+    <!-- BOOTSTRAP SCRIPT -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

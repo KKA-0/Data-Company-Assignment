@@ -1,0 +1,100 @@
+{% extends 'basefile.html' %}
+{% block body %}
+
+
+<div>
+  <center>
+    <h1 class="34" href="#hello">Login Page</h1>
+    <hr class="w-50">
+    <!-- Google Authentication -->
+    <div id="gSignInWrapper">
+      <span class="label">Log in with:</span>
+      <div id="customBtn">
+        <span class="icon">
+
+        </span>
+        <span class="buttonText">Google</span>
+      </div>
+    </div>
+    <div id="name"></div>
+
+    <br>
+    <h3>OR</h3>
+    <br>
+
+    <!-- FORM START -->
+
+    <form class="row g-3 justify-content-center needs-validation container" novalidate>
+
+      <!-- NAME FIELD -->
+
+      <div class="col-md-3">
+        <label for="validationCustom01" class="form-label">Name Field</label>
+        <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+        <br>
+        <!-- SUBMIT BUTTON -->
+        <div class="col-12">
+          <button class="btn btn-primary" type="submit">Submit form</button>
+        </div>
+      </div>
+
+      <!-- DROPDOWN FIELD -->
+
+      <div class="col-md-4">
+        <label for="validationCustom04" class="form-label">DropDown Field</label><br>
+
+      <!-- FIRST DROPDOWN -->
+        <div class="dropdown">
+          <button class="dropbtn">Name X</button>
+          <div class="dropdown-content">
+            <a href="#">Name a</a>
+            <div>
+              <!-- SECOND NESTED DROPDOWN -->
+              <div class="dropdown1">
+                <div class="dropbtn1">Name b</div>
+                <div class="dropdown-content1">
+                  <a href="#">Name l</a>
+                  <a href="#">Name m</a>
+                  <a href="#">Name n</a>
+                </div>
+              </div>
+            </div>
+            <a href="#">Name c</a>
+          </div>
+        </div>
+
+      </div>
+    </form>
+
+
+  </center>
+
+</div>
+<script>startApp();</script>
+<script>
+  // Example starter JavaScript for disabling form submissions if there are invalid fields
+  (() => {
+    'use strict'
+
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    const forms = document.querySelectorAll('.needs-validation')
+
+    // Loop over them and prevent submission
+    Array.from(forms).forEach(form => {
+      form.addEventListener('submit', event => {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+  })()
+</script>
+
+
+{% endblock body %}

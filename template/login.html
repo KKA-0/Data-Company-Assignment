@@ -11,19 +11,21 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
+  
   
   <title>Login</title>
 </head>
 <body>
-  
+  <br><br><br>
  <center>
   <div class="BOX">
   <div class="parent">
   <h1 class="login">Login Page</h1>
-  <hr><br><br><br><br><br>
+  <hr><br>
   <form>
     <input  class="name" type="text" placeholder="Enter Your Name"><br><br>
+    <input  class="name" type="text" placeholder="Enter Your E-mail"><br><br>
+    
     <div class="dropdown">
       <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Names
       <span class="caret"></span></button>
@@ -55,27 +57,30 @@
 
   </form>
 </div>
+<br>
   <h1 class="login">OR</h1>
 
- 
+  <br>
 
 
   {% load socialaccount %}
 <html>
 <body>
-<h1 class="login">Google Login</h1>
-{% if user.is_authenticated %}
-  <p>Welcome, You are logged in as {{ user.username }}</p>
-  <a href="http://127.0.0.1:8000/logout/">Logout</a>
 
+{% if user.is_authenticated %}
+  <p>Welcome, You are logged in as <h2 class="user"> {{ user.username }} </h2></p>
+  <div  class="logout"><h3><a href="http://127.0.0.1:8000/logout/">Logout</a></div>
+  </h3>
 {% else %}
   <a href="{% provider_login_url 'google' %}"><img src="/static/img/googlebtn.png"></a>
   
 {% endif %}
 
 </body>
-</html></div>
+</html>
+</div>
 </center>
+<br><br><br>
 
  <script>
   $(document).ready(function(){

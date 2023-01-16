@@ -1,6 +1,9 @@
 html {
   scroll-behavior: smooth;
 }
+
+
+
 body{
 
   background-image: url("/static/img/bg.jpg");
@@ -188,6 +191,11 @@ h5{
     
 }
 
+
+
+
+
+
 .sign-up:hover{
     margin: 5px;
     height: 15vh;
@@ -236,4 +244,56 @@ a:active { text-decoration: none; color: #f1f1f1;}
 
 .ahaha{
   color: black;
+}
+
+
+@media screen and (max-width: 600px){
+  
+  h5{
+    font-family: 'Sofia Sans', sans-serif;
+    position: absolute;
+    color: rgb(255, 255, 255);
+    margin-bottom: -40%;
+    text-shadow: 6px 8px 9px black;
+
+
+  }
+  .text{
+    font-family: 'Sofia Sans', sans-serif;
+    font-weight: bold;
+    position: absolute;
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 15%;
+    text-shadow: 6px 6px 9px black;
+    text-align: center;
+
+    
+  }
+
+  .sign-up{
+
+    font-family: 'Sofia Sans', sans-serif;
+    margin: 5px;
+    height: 7vh;
+    transition: 0.3s ease-in-out;
+    width: 30%;
+    background: rgb(167, 40, 226);
+    margin-top: 110%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    font-weight: bolder;
+}
+
+.sign-up:hover{
+    margin: 5px;
+    height: 10vh;
+    width: 30%;
+    background: palevioletred;
+    margin-top: 110%;
+    
+}
 }

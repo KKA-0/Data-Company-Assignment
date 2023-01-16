@@ -87,6 +87,18 @@ TEMPLATES = [
     },
 ]
 
+SOCIALACCOUNT_PROVIDERS = {
+    'google': {
+        'SCOPE':{
+            'profile',
+            'email',
+        },
+        'AUTH_PARAMS':{
+            'access_type': 'online',
+        }
+    }
+}
+
 WSGI_APPLICATION = 'DataAssignment.wsgi.application'
 
 
@@ -119,6 +131,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+LOGIN_REDIRECT_URL = 'http://127.0.0.1:8000/Login/'
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/

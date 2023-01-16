@@ -26,4 +26,5 @@ urlpatterns = [
     path('Login/', views.LoginActivity, name='home2'),
     path('accounts/', include('allauth.urls')),
     path("", include("allauth.urls")),
+    
 ]

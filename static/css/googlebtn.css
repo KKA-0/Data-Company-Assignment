@@ -10,6 +10,19 @@ body{
   
 }
 
+.BOX{
+  height: fit-content;
+  width: fit-content;
+  background-color: blueviolet;
+  padding: 40px;
+  border: 10px black;
+  border-radius: 10px;
+}
+
+p{
+  color: beige;
+}
+
 .login{
   color: rgb(255, 0, 0);
   font-family: cursive;

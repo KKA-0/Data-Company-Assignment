@@ -18,6 +18,7 @@
 <body>
   
  <center>
+  <div class="BOX">
   <div class="parent">
   <h1 class="login">Login Page</h1>
   <hr><br><br><br><br><br>
@@ -55,23 +56,27 @@
   </form>
 </div>
   <h1 class="login">OR</h1>
-  <br>
-  <br>
+
  
 
 
   {% load socialaccount %}
 <html>
 <body>
-<h1>My Google OAuth Project </h1>
+<h1 class="login">Google Login</h1>
 {% if user.is_authenticated %}
   <p>Welcome, You are logged in as {{ user.username }}</p>
+  <a href="http://127.0.0.1:8000/logout/">Logout</a>
+
 {% else %}
-  <a href="{% provider_login_url 'google' %}">Login With Google</a>
+  <a href="{% provider_login_url 'google' %}"><img src="/static/img/googlebtn.png"></a>
+  
 {% endif %}
+
 </body>
-</html>
+</html></div>
 </center>
+
  <script>
   $(document).ready(function(){
     $('.dropdown-submenu a.test').on("click", function(e){
